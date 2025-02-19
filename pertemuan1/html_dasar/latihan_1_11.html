@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Halaman HTML Saya</title>
+    </head>
+    <body>
+        <table border="1" bgcolor="white" width="100%">
+            <tr>
+                <td width="30%" valign="center">
+                    <ul>
+                        <li><a href="latihan_1_1.html" target="if">Halaman 1</a></li>
+                        <li><a href="latihan_1_2.html" target="if">Halaman 2</a></li>
+                        <li><a href="latihan_1_3.html" target="if">Halaman 3</a></li>
+                        <li><a href="latihan_1_4.html" target="if">Halaman 4</a></li>
+                        <li><a href="latihan_1_5.html" target="if">Halaman 5</a></li>
+                        <li><a href="latihan_1_6.html" target="if">Halaman 6</a></li>
+                        <li><a href="latihan_1_7.html" target="if">Halaman 7</a></li>
+                        <li><a href="latihan_1_8.html" target="if">Halaman 8</a></li>
+                        <li><a href="latihan_1_9.html" target="if">Halaman 9</a></li>
+                        <li><a href="latihan_1_10.html" target="if">Halaman 10</a></li>
+                    </ul>
+                <td width="70%">
+                    <iframe name="if" width="100%" height="500px" style="display: none;"></iframe>
+                </td>
+            </tr>
+        </table>
+        <script>
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    document.querySelector('iframe').style.display = 'block';
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Rencana Studi (KRS)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            font-size: 12px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+        }
+        .header img {
+            height: 80px;
+            position: absolute;
+            left: 10%;
+        }
+        .header h2, .header h3, .header h4 {
+            margin: auto;
+        }
+        .contact-info {
+            font-size: 10px;
+            margin-top: 5px;
+        }
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-size: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        .signature {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            font-size: 12px;
+        }
+        .title {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .title h3, .title h4 {
+            margin: 3px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="gambar\icon.png" alt="Icon">
+            <h2>KEMENTERIAN PENDIDIKAN, KEBUDAYAAN,</h2>
+            <h3>RISET, DAN TEKNOLOGI</h3>
+            <h4>POLITEKNIK NEGERI MADIUN</h4>
+            <hr style="margin-bottom:auto;">
+            <hr style="margin-top:auto">
+            <p class="contact-info">
+                Jalan Serayu Nomor 84 Madiun Kode Pos 63133<br>
+                Telepon +62 351 452970 Faksimile +62 351 452980<br>
+                Laman: <a href="http://www.pnm.ac.id" target="_blank">www.pnm.ac.id</a>, Surel: <a href="mailto:sekretariat@pnm.ac.id">sekretariat@pnm.ac.id</a>
+            </p>
+        </div>
+        <div class="info">
+            <div>
+                <p><strong>Nama Mahasiswa:</strong> GHOFUR AKBAR M. <span id="nama"></span></p>
+                <p><strong>NIM:</strong> 244311042 <span id="nim"></span></p>
+            </div>
+            <div>
+                <p><strong>Jurusan:</strong> Teknik</p>
+                <p><strong>Program Studi:</strong> Teknologi Rekayasa Perangkat Lunak</p>
+            </div>
+        </div>
+        <h3>Mata Kuliah yang ditempuh</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Kode MK</th>
+                    <th>Mata Kuliah</th>
+                    <th>SKS</th>
+                    <th>Kelas</th>
+                    <th>Dosen Pengampu</th>
+                </tr>
+            </thead>
+            <tbody id="krs-body">
+            </tbody>
+        </table>
+        <div class="signature">
+            <div>
+                <p>Mahasiswa,</p>
+                <br><br>
+                <p><span id="nama"></span></p><br>
+                GHOFUR AKBAR M.
+                <p>NIM: 244311042 <span id="nim"></span></p>
+                
+            </div>
+            <div>
+                <p>Madiun, 3 Februari 2023</p>
+                <p>Dosen Pembina Akademik,</p>
+                <br><br>
+                <p><strong>Gus Nanang Syaifuddin, S.Kom., M.Kom.</strong></p>
+                <p>NIDN: 0714088904</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const mahasiswa = {
+            nama: "Nama Mahasiswa",
+            nim: "123456789",
+            krs: [
+                { no: 1, kode: "MKU2201", mataKuliah: "Agama Islam", sks: 2, kelas: "2B", dosen: "Dr. Nanik Nurhayati, S.Ag., M.Pd." },
+                { no: 2, kode: "TI22202", mataKuliah: "Pemrograman Mobile 1", sks: 2, kelas: "2B", dosen: "Sigit Kariagil Bimomurongho, S.Kom., M.T." },
+                { no: 3, kode: "TI22203", mataKuliah: "Praktik Pemrograman Mobile 1", sks: 2, kelas: "2B", dosen: "Sigit Kariagil Bimomurongho, S.Kom., M.T." },
+                { no: 4, kode: "TI22204", mataKuliah: "Manajemen Resiko Proyek", sks: 2, kelas: "2B", dosen: "Lutfiyah Dwi Setia, S.Kom., M.Kom." },
+                { no: 5, kode: "TI22205", mataKuliah: "Pemrograman Berbasis Obyek", sks: 2, kelas: "2B", dosen: "Ikhwan Baidlowi Sumatsa, S.Kom., M.Kom." },
+                { no: 6, kode: "TI22206", mataKuliah: "Praktik Pemrograman Berbasis Obyek", sks: 2, kelas: "2B", dosen: "Ikhwan Baidlowi Sumatsa, S.Kom., M.Kom." },
+                { no: 7, kode: "TI22207", mataKuliah: "Desain & Pemrograman Web", sks: 2, kelas: "2B", dosen: "Ardian Prima Atmaja, S.Kom., M.Cs." },
+                { no: 8, kode: "TI22208", mataKuliah: "Praktik Desain & Pemrograman Web", sks: 2, kelas: "2B", dosen: "Ardian Prima Atmaja, S.Kom., M.Cs." },
+                { no: 9, kode: "TI22209", mataKuliah: "Sistem Operasi", sks: 2, kelas: "2B", dosen: "Hendrik Kusbandono, S.Kom., M.Kom." },
+                { no: 10, kode: "TI22210", mataKuliah: "Praktik Sistem Operasi", sks: 2, kelas: "2B", dosen: "Hendrik Kusbandono, S.Kom., M.Kom." }
+            ]
+        };
+
+        const krsBody = document.getElementById("krs-body");
+        mahasiswa.krs.forEach(matkul => {
+            const row = `<tr><td>${matkul.no}</td><td>${matkul.kode}</td><td>${matkul.mataKuliah}</td><td>${matkul.sks}</td><td>${matkul.kelas}</td><td>${matkul.dosen}</td></tr>`;
+            krsBody.innerHTML += row;
+        });
+    </script>
+</body>
+</html>

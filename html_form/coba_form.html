@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <title>Form Sederhana</title>
+        <link rel='icon' type='img/png'  href='html_form\gambar\icon.png' sizes="16x16">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+    <body>
+        <form action="/action_page.php" target="_blank" method="get">
+            <label for="depan">Nama Depan :</label><br>
+            <input type="text" id="depan" name="i_name" value="Budi"><br>
+            <label for="n_belakang">Nama Belakang :</label><br>
+            <input type="text" id="n_belakang" name="i_belakang" value="Prawira"><br><br>
+            <input type="submit" value="Kirim">
+            <input type="reset" value="Reset">
+        </form>
+        <p> Jika Anda mengklik tombol "Kirm", data formulir akan dikirim ke halaman bernama 
+            "/action_page.php"
+            <br>
+            <br>
+            Kesimpulan : <br>
+            susunan kode yang dibuat akan mengeksekusi perintah sebagaimana yang telah diskenariokan.
+            atribut action berkontribusi dalam pemberian nama alamat halaman, atribut target akan menetukan
+            dimana area yang akan dijadikan destinasi oleh halaman action (jika _self akan menindih sementara
+            _blank akan membuka di tab baru), dan atribut method akan membuat metode pengiriman input pada form
+            dapat di track disaat kita melakukan inspeksi pada halaman dan memilih opsi network dan show all.
+            selain itu, type submit akan berkontribusi dalam menjalankan fungsi kirim, dan type reset akan
+            berkontribusi dalam mengeksekusi fungsi reset pada form.
+        </p>
+    </body>
+</html>

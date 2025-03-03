@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Tipe input</title>
+        <link rel="icon" type="img/png" href="html_form\gambar\icon.png" sizes="16X16" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <label for="username" >type 'text' :</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="pwd"> type 'password' </label><br>
+        <input type="password" id="pwd" name="pwd"><br>
+
+        <br>
+
+        <hr>
+        <h3>Uji coba 2</h3>
+        <input type="radio" id="html" value="HTML"><label for="html"> HTML</label><br>
+        <input type="radio" id="css" value="CSS"><label for="css"> CSS</label><br>
+        <input type="radio" id="javascript" value="JavaScript"><label for="javascript"> JavaScript</label><br>
+        <p> !--tulis kesimpulan uji coba disini-- <br>
+            sebagaimana percobaan yang diberikan sesuai skenario, yaitu mengubah nama atribut dalam input agar
+            menjadi berbeda dengan id, tidak memberikan pengaruh apa-apa dalam keberlangsungan kode, hal tersebut
+            hanya memberikan efek negatif, yaitu kode jadi sulit untuk dipahami.
+        </p>
+
+        <br>
+
+        <hr>
+        <h3> Uji coba 3</h3>
+        <input type="checkbox" id="id2" value="Bike">
+        <label for="id1"> I have a bike </label> <br>
+        <input type="checkbox" id="id3" value="Car">
+        <label for="id2"> I have a car </label> <br>
+        <input type="checkbox" id="id4" value="Boat">
+        <label for="id3"> I have a boat </label> <br>
+        <p> !--tulis kesimpulan uji coba disini-- <br>
+            sebagaimana percobaan yang diberikan sesuai skenario, yaitu mengubah nama atribut dalam input agar
+            menjadi berbeda dengan id, tidak memberikan pengaruh apa-apa dalam keberlangsungan kode, hal tersebut
+            hanya memberikan efek negatif, yaitu kode jadi sulit untuk dipahami. Selain itu, penggunaan type pada 
+            input juga mempengaruhi hasil akhir dari tampilan area pengisian, sehingga terjadi perbedaan tampilan
+            antara radio dan checkbox.
+        </p>
+
+        <br>
+
+        <hr>
+        <h3> Uji coba 4</h3>
+        <label for="favcolor" >Pilih Warna dengan type='color' :</label>
+        <input type="color" id="favcolor" name="favcolor"><br>
+        <label for="b"> Pilih tanggal dengan type= 'date' : </label>
+        <input type="date" id="b" name="tanggal"><br>
+        <input type="button" onclick="alert('Hello World')" value="Click Me"> <br>
+        <p> !--tulis kesimpulan uji coba disini-- <br>
+            sebagaimana percobaan yang diberikan, type color akan memberikan output berupa kotak
+            yang memberikan opsi untuk mengatur warna yang diinginkan, sementara type date akan
+            memberikan output berupa kotak yang memberikan opsi untuk mengatur tanggal yang ingin dipilih,
+            dengan format tanggal/bulam/tahun. pada bagian input terakhir dengan type button, dengan atribut
+            onclick akan memberikan fungsi sebagai tombol yang bisa di klik, dan alert akan menampilkan pesan 
+            pop up pada halaman sesuai dengan value yang diberikan.
+        </p>
+
+        <br> 
+
+        <hr>
+        <h3> Uji coba 5</h3>
+        <label for="birthdaytime" >input dengan datetime-local :</label>
+        <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+        <label for="bdaymonth"> input dengan type month :</label>
+        <input type="month" id="bdaymonth" name="bdaymonth"><br>
+        <label for="email"> Enter your email :</label>
+        <input type="email" id="email" name="email"><br>
+        <p> !--tulis kesimpulan uji coba disini-- <br>
+            sebagaimana percobaan yang diberikan, type datetime-local akan memberikan output berupa
+            opsi tanggal denan format tanggal, bulan, tahun, dan jam, Sementara itu, type month akan memberikan
+            output berupa tanggal dengan format bulan dan tahun saja. Selain itu, type email akan memberikan output
+            berupa tempat untuk memasukkan email sesuai dengan format email seharusnya (yang istimewa adalah
+            , type email akan bisa mengakses shortcut untuk memilih email yang sering dimasukkan/diketik pada 
+            device yang digunakan).
+        </p>
+        
+        <br>
+
+        <hr>
+        <h3> Uji coba 6</h3>
+        <input type="image" src="html_form\gambar\icon.png" alt="Submit" width="48" height="48"> <br>
+        <label for="myfile"> Pilih file : </label>
+        <input type="file" id="myfile" name="myfile"><br>
+        <input type="hidden" id="custId" name="custId" value="3478"> <br>
+        <p> !--tulis kesimpulan uji coba disini-- <br>
+            sebagaimana percobaan yang diberikan, type image akan memberikan output berupa tampilan dari gambar yang
+            kita input pada aribut src. selain itu, atribut submit pada bagian input juga mewakili fungdibilitas untuk
+            menginput gambar pada sebuah kotak yang muncul dengan tulisan yang sesuai dengan label yang dibuat.
+            selain itu, atribut hidden memberikan output dimana file yang telah dipilih tidak akan ditampilkan secara
+            langsung di halaman web.
+        </p>
+
+        <br>
+
+        <hr>
+        <h3>Uji coba 7</h3>
+        <label for="quantity"> Quantity (between 1 and 10) :</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10"><br>
+        <label for="vol"> Volume (between 0 and 50) :</label><br>
+        <input type="range" id="vol" name="vol" min="-50" max="50"><br>
+        <p> !--tulis kesimpulan uji coba disini-- <br>
+            Sebagaimana instruksi, type number akan menampilkan output berupa sebuah kotak yang berisikan tempat untuk 
+            mengisi angka sesuai dengan parameter min dan max yang dibuat (bila berlebihan dapat diinput secar manual, 
+            namun akan otomatis ke nilai max ketika diturunkan dengan kursor down pada kotak). Sementara itu, type range 
+            akan memberikan output berupa tampilan parameter yang bisa disesuaikan dengan cara drag over the available bar, 
+            namun nilai aslinya tidak diketahui karena tidak ditampilkan, tetapi yang jelas nilai maksimum dan minimum sudah 
+            bisa dipastikan sesuai dengan input parameter min dan max yang dibuat.
+        </p>
+
+        <br> 
+
+        <hr>
+        <h3> Uji coba 8</h3>
+        <label for="homepage" >Add your homepage :</label>
+        <input type="url" id="homepage" name="homepage"><br>
+        <label for="gsearch"> Search Google :</label>
+        <input type="search" id="gsearch" name="gsearch"><br>
+        <label for="ph"> Enter your phone number:</label>
+        <input type="tel" id="ph" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+        <p> !--tulis kesimpulan uji coba disini-- <br>
+            sebagaimana instruksi yang diberikan, type url akan memberi output berupa form pengisian yang secara spesifik menangani inputan 
+            berupa link/url, sementara itu type search akan memberi output berupa form pengisian yang secara spesifik menangani inputan
+            berupa fitur pencarian, dan type tel akan memberi output berupa form pengisian yang secara spesifik menangani inputan berupa
+            nomor telepon berformat.
+        </p>
+
+        <br>
+
+        <hr>
+        <h3>Uji coba 9</h3>
+        <label for="appt"> Select a time :</label>
+        <input type="time" id="appt" name="appt"><br>
+        <label for="week"> Select a week :</label>
+        <input type="week" id="week" name="week"><br>
+        <p> !--tulis kesimpulan uji coba disini-- <br>
+            Sebagaimana instruksi, type time akan memberikan output tampilan berupa box yang akan memberikan opsi berupa setting yang hanya
+            menampilkan pilihan berupa waktu dengan format jam dan menit. Sementara itu, type week akan memberikan output berupa tampilan 
+            box yang akan memberikan opsi berupa setting tanggal dengan format pekan, tanggal dan tahun.
+        </p>
+    </body>
+</html>

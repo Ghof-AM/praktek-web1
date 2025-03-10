@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='author' content='Ghofur Akbar M.'>
+    <meta name='nim' content='12345'>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            
+            let phonePattern = /^\d{4}-\d{6}$/;
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let phone = document.getElementById("phone").value;
+            let email = document.getElementById("email").value;
+            let birthDate = new Date(document.getElementById("birthdate").value);
+            let meetingDate = new Date(document.getElementById("meetingdate").value);
+            let today = new Date();
+            let minBirthDate = new Date("1987-01-01");
+            let maxBirthDate = new Date("1993-01-01");
+            let meetingTime = document.getElementById("meetingtime").value;
+            
+            if (!phonePattern.test(phone)) {
+                alert("Format No. Telepon harus XXXX-XXXXXX.");
+                return false;
+            }
+            if (!emailPattern.test(email)) {
+                alert("Format Email tidak valid.");
+                return false;
+            }
+            if (birthDate < minBirthDate || birthDate > maxBirthDate) {
+                alert("Tanggal lahir harus antara 1 Januari 1987 - 1 Januari 1993.");
+                return false;
+            }
+            if (meetingDate <= today) {
+                alert("Tanggal pertemuan harus di atas hari ini.");
+                return false;
+            }
+            let [hour, minute] = meetingTime.split(":");
+            if (hour < 17 || hour > 21 || (hour == 21 && minute > 0)) {
+                alert("Waktu pertemuan harus antara 17:00 - 21:00 WIB.");
+                return false;
+            }
+            alert("Form berhasil dikirim!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <body>
+        <h2>Form Penjadwal Pertemuan</h2>
+        <form onsubmit="return validateForm(event)">
+            <fieldset>
+                <legend>Informasi Pribadi</legend>
+                Nama: <input type="text" required><br><br>
+                No. Telepon: <input type="text" id="phone" required><br><br>
+                Alamat Email: <input type="email" id="email" required><br><br>
+                Tanggal Lahir: <input type="date" id="birthdate" required><br>
+            </fieldset>
+            <fieldset>
+                <legend>Permintaan Pertemuan</legend>
+                Tujuan Pertemuan: <input type="text" required><br><br>
+                Tingkat Kepentingan: <input type="range" min="0" max="10"><br><br>
+                Tanggal: <input type="date" id="meetingdate" required><br><br>
+                Waktu: <input type="time" id="meetingtime" required><br>
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

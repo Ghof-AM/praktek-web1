@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo CSS!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .header-container {
+            background-color: blue;
+            color: yellow;
+            padding: 15px;
+            text-align: left;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .sub-header {
+            color: white;
+            font-size: 18px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+        .sidebar {
+            width: 300px;
+            height: 400px;
+            border: 4px dotted #666;
+            padding: 10px;
+            text-align: left;
+            min-height: 180px;
+        }
+        .menu a {
+            display: block;
+            font-size: 18px;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+        .menu a:nth-child(6) {
+            text-decoration: underline;
+        }
+        .menu a:nth-child(1),
+        .menu a:nth-child(2),
+        .menu a:nth-child(3),
+        .menu a:nth-child(4),
+        .menu a:nth-child(5) {
+            color: black;
+        }
+        .menu a:nth-child(6):hover {
+            color: blue;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .footer {
+            background-color: #cce0f5;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: right;
+            padding-right: 20px;
+        }
+        .highlight {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">Halo CSS !</div>
+        <div class="sub-header">Ini adalah website CSS saya</div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="menu">
+                <a href="#">Menu 1</a>
+                <a href="#">Menu 2</a>
+                <a href="#">Menu 3</a>
+                <a href="#">Menu 4</a>
+                <a href="#">Menu 5</a>
+                <a href="#">Menu 6</a>
+            </div>
+        </div>
+        <div class="content">
+            <img src="icon.png" alt="Logo Politeknik Negeri Madiun">
+            <h2>TI</h2>
+            <p>Politeknik Negeri Madiun</p>
+            <p class="highlight">Mewujudkan pendidikan tinggi vokasi dalam bidang Teknologi Informasi dan penerapannya yang berkualitas, inovatif dan berdaya saing Nasional.</p>
+        </div>
+    </div>
+    <div class="footer">Nama Anda | NPM | TI-XX</div>
+</body>
+</html>

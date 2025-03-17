@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Pseudo class selector</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        p {
+            display: none;
+            background-color: darkgray;
+            padding: 20px;
+        }
+        div:hover p { /* hover adalah CSS Pseudo Class*/
+            display: none;
+        }
+        a {
+            text-decoration: none;
+            color: violet;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div> Letakkan kursor disini untuk melihat div element
+        <p> Saya adalah element p</p>
+    </div>
+    <a href="#">Hover di sini untuk melihat efek warna</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title> Combinator Selector </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div p { /*no 1*/
+            color: red;
+        }
+        div > p { /*no 2*/
+            background-color: yellow;
+        }
+        div + p { /*no 3*/
+            background-color: darkgray;
+        }
+        div ~ p { /*no 4*/
+            color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p> This is a paragraph. Terangkan kesimpulan tentang selektor no 1 pada paragraf ini
+            pada no 1 dengan slector p akan membuat semua tulisan yang ada didalam div menjadi berwarna merah.
+        </p>
+        <p> This is a paragraph. Terangkan kesimpulan tentang selektor no 2 pada paragraf ini
+            pada no 2 dengan selector > p akan membuat no 2 menjadi anak dari div (mewarisi konten selector 1) dan memiliki latar berwarna kuning.
+        </p>
+    </div>
+    <p> This is a paragraph. Terangkan kesimpulan tentang selektor no 3 pada paragraf ini
+        pada no 3 dengan selector + p akan membuat no 3 menjadi memiliki konten dari selector selanjutnya dan memiliki latar belakang berwarna darkgrey.
+    </p>
+    <p> This is a paragraph. Terangkan kesimpulan tentang selektor no 4 pada paragraf ini
+        pada no 4 dengan selector ~ p akan membuat no 4 menjadi memiliki konten sesuai dengan isi dari selector no 4 yaitu memiliki tulisan berwarna cyan.
+    </p>
+</body>
+</html>
